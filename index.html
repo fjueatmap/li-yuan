@@ -81,6 +81,53 @@
         display: flex;
         justify-content: center;
     }
+    .mo{
+        background-color: rgb(240, 186, 105);
+        color: white;
+        font-family: setofont;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        height: 35px;
+        margin-top: 40px;
+        margin-right:3px;
+        margin: 1%;
+    }
+    .imgp{
+        background-color: rgb(240, 186, 105);
+        color: white;
+        font-family: setofont;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        height: 35px;
+        margin-top: 40px;
+        margin-right:3px;
+        margin: 1%;
+    }
+    .m1{
+        border-color: gray;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 1%;
+        width: 40%;
+        position: absolute;
+        text-align: center;
+        color: white;
+        font-family: setofont;
+    }
+    .m1 li{
+        float: left;
+        margin-right:25px;
+        list-style-type: none;
+        font-size: 25px;
+    }
+    .imgb{
+        display: flex;
+        justify-content: center;
+    }
 </style>
 <html>
 
@@ -93,11 +140,27 @@
     <script>
        $(document).ready(function(){
             $(".sub").slideUp(0)
+            $(".sub2").slideUp(0)
+            $(".imgb").slideUp(0)
             for(i = 0;i<$(".main").length;++i){
                 $(".main:eq("+i+")").click({id:i},function(e){
                     n=e.data.id
                     $(".sub:eq("+n+")").slideToggle();
                     $(".sub:not(:eq(" + n + "))").slideUp();
+                })
+            }
+            for(i = 0;i<$(".mo").length;++i){
+                $(".mo:eq("+i+")").click({id:i},function(e){
+                    n=e.data.id
+                    $(".sub2:eq("+n+")").slideToggle();
+                    $(".sub2:not(:eq(" + n + "))").slideUp();
+                })
+            }
+            for(i = 0;i<$(".imgp").length;++i){
+                $(".imgp:eq("+i+")").click({id:i},function(e){
+                    n=e.data.id
+                    $(".imgb:eq("+n+")").slideToggle();
+                    $(".imgb:not(:eq(" + n + "))").slideUp();
                 })
             }
             $("#menu").css("width",$(".main").length*100)
@@ -202,53 +265,207 @@
     <div id="辛蔬" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">辛蔬</div>
-		<img class="img" src="57.jpg">
-		<p style=font-size:smaller:>作為校內唯一餐點全是素食類的店，推薦素食者前往，對於食量較小的人可以選擇店內販售的若燥飯，<br>
-			一份38元不會出現吃不完的狀況發生
-		</p>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>田園野菇咖哩飯  85元</li>
+                    <li>田園薯餅咖哩飯  85元</li>
+                    <li>田園芝心蛋咖哩飯  85元</li>
+                    <li>新蔬食番茄肉醬義大利麵  95元</li>
+                    <li>咖哩雞肉水餃/鍋貼  6元</li>
+                    <li>若燥飯  38元</li>
+                    <li>花生香辣麵  79元</li>
+                    <li>起司花生香辣麵  89元</li>
+                    <li>鮮蔬菇菇麵/粥7  9元</li>
+                    <li>麻醬麵  小55/大70元</li>
+                    <li>椒香麻醬麵  小55/大70元</li>
+                    <li>咖哩乾拌麵  小55/大70元</li>
+                    <li>鮮蔬菇菇湯  50元</li>
+                    <li>若燥飯A套餐(若燥飯+滷蛋/荷包蛋+鮮蔬菇菇湯)  95元</li>
+                    <li>乾拌麵B套餐(三種乾拌麵(小)選一+鮮蔬菇菇湯)  95元</li>
+                </ul>  
+            </div>
+		    <p style=font-size:smaller:>作為校內唯一餐點全是素食類的店，推薦素食者前往，對於食量較小的人可以選擇店內販售的若燥飯，<br>
+			    一份38元不會出現吃不完的狀況發生
+		    </p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="picture/57.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="饗敘" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">饗敘</div>
-		<img class="img" src="501.jpg">
-		<p style=font-size:smaller:>午餐時間都是大排長龍，輔大附近唯一一家有賣鍋燒意麵與炒泡麵的店家</p>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>招牌原味鍋燒麵  90元</li>
+                    <li>韓式泡菜鍋燒麵  90元</li>
+                    <li>四川麻辣鍋燒麵  90元</li>
+                    <li>日式咖哩鍋燒麵  90元</li>
+                    <li>日式牛奶鍋燒麵  90元</li>
+                    <li>新加坡叻沙鍋燒麵  90元</li>
+                    <li>招牌原味炒泡麵  90元</li>
+                    <li>韓式泡菜炒泡麵  90元</li>
+                    <li>蔥香椒麻炒泡麵  90元</li>
+                    <li>XO沙茶蝦醬炒泡麵  90元</li>
+                    <li>媽媽雞絲滷肉飯  100元</li>
+                    <li>鹹酥雞滷肉飯  100元</li>
+                    <li>卡拉鹹酥雞  50元</li>
+                    <li>黃金花枝丸  50元</li>
+                    <li>黃金脆薯  50元</li>
+                    <li>麥克雞塊  50元</li>
+                    <li>甜不辣  50元</li>
+                    <li>豬血糕  50元</li>
+                    <li>百頁豆腐  50元</li>
+                </ul>  
+            </div>
+		    <p style=font-size:smaller:>午餐時間都是大排長龍，輔大附近唯一一家有賣鍋燒意麵與炒泡麵的店家</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="picture/501.jpg" style="height:30% ;width: 30%;">
     </div>
     <div id="阿珠媽" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">阿珠媽</div>
-		<img class="img" src="507.jpg">
-		<img class="img" src="506.jpg">
-		<img class="img" src="505.jpg">
-		<img class="img" src="503.jpg">
-		<p style=font-size:smaller:>賣有各式韓式料理</p>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>韓式烤肉飯(牛)  單119/套149元</li>
+                    <li>韓式烤肉飯(豬)  單109/套139元</li>
+                    <li>韓式泡麵  單99/套119元</li>
+                    <li>韓式炒泡麵  單99/套119元</li>
+                    <li>韓式炒烏龍  單99/套119元</li>
+                    <li>韓式海苔拌飯  單77/套106元</li>
+                    <li>泡菜炒飯  80元</li>
+                    <li>烏龍湯麵  單70/套99元</li>
+                    <li>韓式泡菜炒泡麵  90元</li>
+                </ul>  
+            </div>
+		    <p style=font-size:smaller:>賣有各式韓式料理</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="picture/507.jpg" style="height:20% ;width: 20%;">
+        <img class="img" src="picture/506.jpg" style="height:20% ;width: 20%;">
+        <img class="img" src="picture/505.jpg" style="height:20% ;width: 20%;">
+        <img class="img" src="picture/503.jpg" style="height:20% ;width: 20%;">
     </div>
     <div id="楓炊炒丼" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">楓炊炒丼</div>
-		<img class="img" src="58.jpg">
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+            <div class="sub2">
+                <ul class="m1">
+                    <li>唐揚雞  70元</li>
+                    <li>牛丼  100元</li>
+                    <li>豬丼  75元</li>
+                    <li>溏心蛋牛丼  115元</li>
+                    <li>月見蛋牛丼  115元</li>
+                    <li>溏心蛋豬丼  90元</li>
+                    <li>月見蛋豬丼  90元</li>
+                </ul>  
+            </div>
 		<p style=font-size:smaller:>豬丼價格親民，如果剩餘時間較長可以考慮排隊吃看看</p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="picture/58.jpg" style="height:20% ;width: 20%;">
     </div>
     <div id="三顧茅廬" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">三顧茅廬</div>
-		<img class="img" src="55.jpg">
-		<p style=font-size:smaller:>111學年度加入加入理園餐廳行列，除一般滷味以外提供更多不同的湯底，<br>
-			偶爾想換吃點不一樣的食物可以考慮看看
-		</p>
+            <div class="mo" >
+                <a style="color:white;">菜單(套餐)</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+		    <div class="sub2">
+                <ul class="m1">
+                    <li>鴨血豆腐套餐  145元</li>
+                    <li>牛肉餐  145元</li>
+                    <li>豬肉餐  140元</li>
+                    <li>雞肉餐  140元</li>
+                </ul>  
+            </div>
+		    <p style=font-size:smaller:>111學年度加入加入理園餐廳行列，除一般滷味以外提供更多不同的湯底，<br>
+			    偶爾想換吃點不一樣的食物可以考慮看看
+		    </p>
         </div>
+    </div>
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="picture/55.jpg" style="height:20% ;width: 20%;">
     </div>
     <div id="熊賀炒飯" class="set" style="width:100%;">
         <div class="border" style="width: 70%;height: 100px;">
             <div class="text" style=" width: 80px;;height: 80px;">熊賀炒飯</div>
-		<img class="img" src="52.jpg">
-		<p style=font-size:smaller:>原本位於514巷明日之星的美食街內，本學期(111年學年度)加入學餐的行列，店內有各式各樣的炒飯炒麵。</p>
+            <div class="mo" >
+                <a style="color:white;">菜單</a>
+            </div>
+            <div class="imgp">
+                <a style="color:white;">圖片</a>
+            </div>
+		    <div class="sub2">
+                <ul class="m1">
+                    <li>臘肉蛋炒飯  120元</li>
+                    <li>櫻花蝦蛋炒飯  100元</li>
+                    <li>鹹魚蛋炒飯  100元</li>
+                    <li>鹹豬肉蛋炒飯  90元</li>
+                    <li>蝦仁肉絲蛋炒飯  90元</li>
+                    <li>青椒牛肉蛋炒飯  90元</li>
+                    <li>沙茶牛肉蛋炒飯  90元</li>
+                    <li>泡菜牛肉蛋炒飯  90元</li>
+                    <li>青椒豬肉蛋炒飯  85元</li>
+                    <li>沙茶豬肉蛋炒飯  85元</li>
+                    <li>泡菜豬肉蛋炒飯  85元</li>
+                    <li>夏威夷蛋炒飯  85元</li>
+                    <li>鳳梨蝦仁蛋炒飯  85元</li>
+                    <li>菜脯香腸蛋炒飯  85元</li>
+                    <li>牛肉蛋炒飯  80元</li>
+                    <li>豬肉蛋炒飯  75元</li>
+                    <li>蝦仁蛋炒飯  75元</li>
+                    <li>香腸蛋炒飯  75元</li>
+                    <li>火腿玉米蛋炒飯  75元</li>
+                    <li>培根玉米蛋炒飯  75元</li>
+                    <li>素肉蛋炒飯  80元</li>
+                    <li>蔬菜玉米蛋炒飯  75元</li>
+                    <li>無敵蛋炒飯  60元</li>
+                    <li>鹹豬肉炒麵  100元</li>
+                    <li>牛肉炒麵  80元</li>
+                    <li>蝦仁炒麵  75元</li>
+                    <li>肉絲炒麵  75元</li>
+                    <li>牛肉沙克飯 90元</li>
+                    <li>豬肉沙克飯 85元</li>
+                </ul>  
+            </div>
+		    <p style=font-size:smaller:>原本位於514巷明日之星的美食街內，本學期(111年學年度)加入學餐的行列，店內有各式各樣的炒飯炒麵。</p>
         </div>
     </div>
-    
+    <div style="width:100%;" class="imgb" style="height:0% ;width: 0%;">
+        <img class="img" src="picture/52.jpg" style="height:20% ;width: 20%;">
+    </div>
 </body>
 
 </html>
